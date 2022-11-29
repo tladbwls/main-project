@@ -10,19 +10,26 @@
     <link rel="shorcut icon" href="/soaply images /favicon.png" />
     <link rel="apple-touch-icon" href="/soaply images /favicon.png" />
 
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
     <div class="wrapper">
       <header id="header" class="header">
-        <div class="containder">
+        <div class="container">
           <nav class="nav-wrapper">
             <ul class="nav-lists">
-              <li><a href="#"></a>About</li>
-              <li><a href="#"></a>Shop</li>
-              <li><a href="#"></a>Reviews</li>
-              <li><a href="#"></a>Gallery</li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">Gallery</a></li>
             </ul>
           </nav>
           <div class="logo">
@@ -30,27 +37,88 @@
               <img src="/soaply images /logo.svg" alt="로고이미지" />
             </a>
           </div>
-          <ul class="sns">
-            <li>
+
+          <ul class="info">
+            <li class="sns">
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="/soaply images /sns-icon-1.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/soaply images /sns-icon-2.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/soaply images /sns-icon-3.svg" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="cart">
               <a href="#">
-                <img src="/soaply images /sns-icon-1.svg" alt="" />
+                <i class="ri-shopping-cart-line"></i>
+                <em>(0)</em>
               </a>
             </li>
-            <li>
-              <a href="#">
-                <img src="/soaply images /sns-icon-2.svg" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="/soaply images /sns-icon-3.svg" alt="" />
-              </a>
+            <li class="user">
+              <button>
+                <i class="ri-user-3-fill"></i>
+              </button>
             </li>
           </ul>
+          <div class="mobile-btn-wrapper">
+            <div class="mobile-btn not-active">
+              <span class="bar_line"></span>
+              <span class="bar_line"></span>
+              <span class="bar_line"></span>
+            </div>
+          </div>
         </div>
+
+        <!-- Mobile Menu Elements -->
+        <div class="mobile-menus"></div>
       </header>
       <section id="main-section" class="landing-section">
         <img src="/soaply images /landing-image.jpeg" alt="비누 메인 이미지" />
+        <div class="landing-text-box container">
+          <h1>소플리 컬렉션 <br />자연을 담은 수제 천연 비누</h1>
+          <p>
+            씨갸는 슈논산 밓일으로 흐제쿄는 숨안너보 라아가눕니다 데까난이어요.
+            오라낸나버 뇨주다 오기하늘다
+          </p>
+          <a href="#" class="common-btn">Shop now</a>
+        </div>
+        <div class="overlay"></div>
+      </section>
+      <!-- Meet Section -->
+      <section class="meet-section section">
+        <div class="container">
+          <div class="meet-wrapper">
+            <div class="meet-text-box">
+              <h4>MEET THE SOAPLY MASTER</h4>
+              <p>
+                읒슨지어 끙호살으로 앜아집다 흥헤늰너낭을, 엔안리다 징나쵠.
+                버브셀엘 키어를 사선헐의는, 개하 근자는 절사엔의. 고긍던 난퍼
+                루셧 렴 쓘란 닐훈 뱡으로 기뫄는 오아를 엲귈벨은. 마벡몺러가
+                사티고힛은 흐보고, 갤푹아마는 가횧도.
+              </p>
+              <span>윤동주, '별 헤는 밤' 중...</span>
+            </div>
+            <div class="meet-image-box">
+              <div class="meet-left-image">
+                <img src="/soaply images /about-image-1.jpeg" alt="" />
+                <img src="/soaply images /about-image-3.jpeg" alt="" />
+              </div>
+              <div class="meet-right-image">
+                <img src="/soaply images /about-image-2.jpeg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 
