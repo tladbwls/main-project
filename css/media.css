@@ -1,4 +1,7 @@
 @media screen and (max-width:980px) {
+
+    .common-btn {font-size: var(--fs-14);}
+
     /* Header Style */
     header{background: #fff; border-bottom: 1px solid var(--color-gray-d);}
     header .container {grid-template-columns: 1fr 1fr;}
@@ -19,11 +22,43 @@
     .landing-text-box h1 {text-shadow: 1px 1px 1px var(--color-gray-2);}
     .landing-text-box p {width: var(--ls-1-2);}
 
+    /* Feature section style */
+    .features-section .feature {padding: var(--el-normal);}
+
+    /* slider section style */
+    .slider-section .slider-text h4 {font-size: var(--fs-20); }
+    .slider-section .slider-nav {width: 45px; height: 45px;}
+    .swiper-button-next:after, 
+    .swiper-button-prev:after  {font-size: 1rem; }
+    .swiper-button-next {right: 2rem;} 
+    .swiper-button-prev {left:2rem}
+
 }
 
 @media screen and (max-width:786px) {
     html {font-size: 14px;}
-}
+    .section {padding: var(--el-section-small) 0;}
+    .constainer {padding: 0 var(--el-normal);}
+
+    /* Meet section style */
+    .meet-section .meet-wrapper {flex-direction: column; row-gap: var(--el-wide);}
+    .meet-section .meet-wrapper .meet-text-box {width: var(--ls-full); }
+    .meet-section .meet-wrapper .meet-text-box p {margin: 0; width: var(--ls-full); }
+    .meet-section .meet-wrapper .meet-image-box {width: var(--ls-full);}
+
+    /* Feature section style */
+    .features-section .features {flex-direction: column; align-items: center;}
+    .features-section .feature {width: 60%;}
+
+    /* slider section style */
+    .slider-section .slider-nav {display: none;}
+    .slider-section .swiper-slide {flex-direction: column; row-gap: var(--el-wide);}
+    .slider-section .swiper-slide > div {width: var(--ls-full); width: 80%; margin: auto;}
+    /* .slider-section .swiper-slide > div.slider-image {width: 80%; margin: auto; } */
+
+    .slider-section .slider-text {align-items: center; text-align: center;}
+
+ }
 
 @media screen and (max-width:600px) {
     .landing-text-box {text-align: center;}
@@ -31,4 +66,14 @@
     .landing-text-box p {width: 80%; margin: auto;}
 
     .overlay {opacity: .7;}
+
+    /* Meet section style */
+    .meet-section .meet-wrapper {padding: 0 5%;}    
+    .meet-section .meet-wrapper .meet-image-box {column-gap: var(--el-normal);}
+    .meet-section .meet-wrapper .meet-left-image {row-gap: var(--el-normal);}
+    .meet-section .meet-wrapper .meet-text-box p {width: var(--ls-full); font-size: var(--fs-16);}
+    .meet-section .meet-wrapper .meet-text-box span {font-size: var(--fs-16);}
+
+    /* Feature section style */
+    .features-section .feature {width: 90%;}
 }
