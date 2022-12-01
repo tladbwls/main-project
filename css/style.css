@@ -242,3 +242,10 @@ span.bar_line:nth-child(2){margin:5px auto;}
 .offers-section .product-text h4 {font-size: var(--fs-name); font-weight: var(--fw-400);}
 .offers-section .product-text strong {font-size: var(--fs-18);}
 .offers-section .product-text p {padding: var(--el-normal); font-size: var(--fs-small-text);}
+
+/* Revuew Style */
+.review-section{background: url(/images/review-background.jpeg) no-repeat center center; background-size: cover;}
+.review-section .reviews {display: flex; flex-wrap: wrap;}
+.review-section .review-frame {width: var(--ls-1-3); padding: var(--el-medium);}
+.review-section .review-item {background: #fff; padding: var(--el-wide); border-radius: .25rem; }
+.review-section .review-item p {font-size: var(--fs-small-text); margin-bottom: var(--el-medium); text-align: center;}
