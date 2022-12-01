@@ -76,4 +76,7 @@
 
     /* Feature section style */
     .features-section .feature {width: 90%;}
+
+    /* slider section style */
+    .slider-section .swiper-slide > div.slider-image {width: 90%;}
 }

@@ -49,8 +49,8 @@ sr.reveal(".landing-text-box", {
   origin: "right",
   distance: "80px",
 });
-sr.reveal(".meet-text-box", {
-  duration: 1000,
+sr.reveal(".meet-text-box .swiper", {
+  duration: 2000,
   origin: "bottom",
   distance: "40px",
 });
