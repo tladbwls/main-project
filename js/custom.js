@@ -79,12 +79,12 @@ sr.reveal(".landing-text-box", {
   origin: "right",
   distance: "80px",
 });
-sr.reveal(".meet-text-box .swiper", {
+sr.reveal(".meet-text-box .swiper, .review-frame, .products", {
   duration: 2000,
   origin: "bottom",
   distance: "40px",
 });
-sr.reveal(".meet-wrapper img, .feature ", {
+sr.reveal(".meet-wrapper img, .feature", {
   duration: 1000,
   origin: "bottom",
   distance: "40px",
