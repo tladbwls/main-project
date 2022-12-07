@@ -79,6 +79,9 @@
     /* insta section */
     .insta-section .insta-right-image {display: none;}
     .insta-section .insta-wrapper {grid-template-columns: 1fr 1fr;}
+
+    /* sign up page style */
+    .sign .sign-box {width: 75vw; }
  }
 
 @media screen and (max-width:600px) {
@@ -121,5 +124,10 @@
     footer .footer-info {flex-direction: column; align-items: center; row-gap: var(--el-medium);}
     footer .footer-info .footer-nav a {padding: var(--el-small);}
     footer .footer-lower {flex-direction: column; row-gap: var(--el-normal) ; align-items: center;}
+
+    /* sign up page style */
+    .sign .sign-box {width: 95vw; }
+    .sign p input:not(input[type='submit']) {padding: var(--el-normal);}
+    .sign p.send-btn input {padding: var(--el-normal);}
 
 }
