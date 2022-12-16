@@ -24,67 +24,13 @@
   </head>
   <body>
     <div class="wrapper sign">
-      <!-- header section -->
-      <header id="header" class="header">
-        <div class="container">
-          <nav class="nav-wrapper">
-            <ul class="nav-lists">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Reviews</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-          </nav>
-          <div class="logo">
-            <a href="/main_project/index.html">
-              <img src="/main_project/images/logo.svg" alt="로고이미지" />
-            </a>
-          </div>
 
-          <ul class="info">
-            <li class="sns">
-              <ul>
-                <li>
-                  <a href="#">
-                    <img src="/main_project/images/sns-icon-1.svg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="/main_project/images/sns-icon-2.svg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="/main_project/images/sns-icon-3.svg" alt="" />
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="cart">
-              <a href="#">
-                <i class="ri-shopping-cart-line"></i>
-                <em>(0)</em>
-              </a>
-            </li>
-            <li class="user">
-              <a href="/main_project/pages/sign-up.html">
-                <i class="ri-user-3-fill"></i>
-              </a>
-            </li>
-          </ul>
-          <div class="mobile-btn-wrapper">
-            <div class="mobile-btn not-active">
-              <span class="bar_line"></span>
-              <span class="bar_line"></span>
-              <span class="bar_line"></span>
-            </div>
-          </div>
-        </div>
+      <!-- header include -->
 
-        <!-- Mobile Menu Elements -->
-        <div class="mobile-menus"></div>
-      </header>
+      <div
+        class="header-wrapper"
+        w3-include-html="/main_project/include/header.html"
+      ></div>
 
       <!-- sign up Form Field Section -->
       <div class="sign-box">
@@ -128,51 +74,19 @@
         </form>
       </div>
 
-      <!-- Footer Section -->
-      <footer>
-        <div class="container">
-          <div class="footer-upper">
-            <div class="footer-logo">
-              <a href="#"><img src="/main_project/images/logo.svg" alt="" /></a>
-            </div>
-            <div class="footer-info">
-              <ul class="footer-nav">
-                <a href="#">ChangeLog</a>
-                <a href="#">Licencing</a>
-                <a href="#">Style Guide</a>
-              </ul>
-              <ul class="footer-sns">
-                <li>
-                  <a href="#"
-                    ><img src="/main_project/images/sns-icon-1.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="/main_project/images/sns-icon-2.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="/main_project/images/sns-icon-3.svg" alt=""
-                  /></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-line"></div>
-          <div class="footer-lower">
-            <span class="footer-copy">&copy; Copyright 2022</span>
-            <span class="byline"
-              >Powered by <a href="#">MainProject</a> -Developed By zipte</span
-            >
-          </div>
-        </div>
-      </footer>
-    </div>
+      <!-- fotter include -->
+
+      <div
+        class="footer-wrapper"
+        w3-include-html="/main_project/include/footer.html"
+      ></div>
 
     <!-- Main Javascript -->
     <script src="/main_project/js/header.js"></script>
     <script src="/main_project/js/signup.js"></script>
+
+    <!-- include files -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="/main_project/js/include.js"></script>
   </body>
 </html>
