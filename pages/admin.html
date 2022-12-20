@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin || Soaply</title>
+    <!-- Favicon Link  -->
+    <link rel="shorcut icon" href="/main_project/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/main_project/images/favicon.png" />
+
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="/main_project/css/normalize.css" />
+    <link rel="stylesheet" href="/main_project/css/header-footer.css" />
+    <link rel="stylesheet" href="/main_project/css/admin.css" />
+    <link rel="stylesheet" href="/main_project/css/media.css" />
+</head>
+<body>
+
+    <div class="wrapper admin-wrapper">
+        <!-- header include -->
+        <div class="header-wrapper" w3-include-html="/main_project/include/header.html"></div>
+
+        <div class="admin-box">
+            <div class="container">
+                <div class="admin-btns">
+                    <button class="active">제품입력</button>
+                    <button>회원관리</button>
+                </div>
+                <div class="admin-panels">
+                    <div class="product-panel panel"></div>
+                    <div class="user-panel panel"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer include -->
+        <div class="footer-wrapper" w3-include-html="/main_project/include/footer.html"></div>
+    </div>
+    
+    <!-- include files -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="/main_project/js/include.js"></script>
+
+    <!-- Main Javascript -->
+    <script src="/main_project/js/header.js"></script>
+    <script src="/main_project/js/loginResponse.js"></script>
+</body>
+</html>
