@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In || Soaply</title>
+    <title>details || Soaply</title>
     <!-- Favicon Link  -->
     <link rel="shorcut icon" href="/main_project/images/favicon.png" />
     <link rel="apple-touch-icon" href="/main_project/images/favicon.png" />
@@ -18,35 +18,27 @@
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="/main_project/css/normalize.css" />
     <link rel="stylesheet" href="/main_project/css/header-footer.css" />
-    <link rel="stylesheet" href="/main_project/css/sign.css" />
+    <link rel="stylesheet" href="/main_project/css/details.css" />
     <link rel="stylesheet" href="/main_project/css/media.css" />
   </head>
   <body>
-    <div class="wrapper sign">
+    <div class="wrapper details">
       <!-- header include -->
-
       <div class="header-wrapper" w3-include-html="/main_project/include/header.html"></div>
-      <!-- sign up Form Field Section -->
-      <div class="sign-box">
-        <h2 class="sign-title">SIGN IN</h2>
-        <form onsubmit="return false;">
-          <!-- <form action="/main_backend/model/register.php" method="post"> -->
-            <p><input type="text" placeholder="아이디" name="id" class="id" /></p>
-          <p><input type="password"  placeholder="비밀번호"  name="pwd"  class="pwd" /></p>
 
-          <p class="send-btn"><input type="submit" value="로그인하기" /></p>
-          <input type="hidden" value="signin" name="req_sign" />
+      <!-- Detail Box Section -->
+      <section class="detail-wrapper section">
+        <div class="container">
+          <div class="detail-image">
+            <img src="/main_project/images/offers-image-1.jpeg" alt="">
+          </div>
+          <div class="detail-text"></div>
+          <div class="detail-comments"></div>
+        </div>
+      </section>
 
-          <span class="sign-line"></span>
 
-          <p class="sign-msg">
-            아직 회원이 아니세요? |
-            <a href="/main_project/pages/sign-up.html">회원가입하기</a>
-          </p>
-        </form>
-      </div>
       <!-- footer include -->
-
       <div class="footer-wrapper" w3-include-html="/main_project/include/footer.html"></div>
     </div>
 
@@ -56,9 +48,8 @@
 
     <!-- Main Javascript -->
     <script src="/main_project/js/header.js"></script>
-    <script src="/main_project/js/signin.js"></script>
     <script src="/main_project/js/loginResponse.js"></script>
-
+    <script src="/main_project/js/requestDetails.js"></script>
 
     
   </body>

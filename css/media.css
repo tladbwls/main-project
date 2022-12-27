@@ -35,6 +35,7 @@
 
     /* Product section style */
     .offer-section .product-frame {padding: var(--el-normal);}
+    .offer-section .product-frame img {width: auto; height: 340px;}
 
     /* review section style */
     .review-section .review-frame {padding: var(--el-normal);}
@@ -106,6 +107,7 @@
 
     /* Product section style */
     .offers-section .product-frame {width: var(--ls-full);}
+    .offers-section .product-frame img {width: 60%; margin: auto;}
 
     /* review section */
     .review-section .review-frame {width: var(--ls-full);}
@@ -130,4 +132,8 @@
     .sign p input:not(input[type='submit']) {padding: var(--el-normal);}
     .sign p.send-btn input {padding: var(--el-normal);}
 
+}
+
+@media screen and (max-width:400px) {
+    .offer-section .product-frame img {height: 180px; margin: auto;}
 }
