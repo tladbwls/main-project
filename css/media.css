@@ -46,6 +46,13 @@
     .insta-section .insta-wrapper {column-gap: var(--el-small);}
     .insta-section .insta-info {font-size: var(--fs-name);}
 
+    /* Detail page style */
+    .line {margin: var(--el-normal) 0;}
+    .details .detail-image {max-height: 350px;}
+    .details .detail-text h2 {font-size: 1.5rem; }
+    .details .price p {font-size: var(--fs-14); }
+    
+
 }
 
 @media screen and (max-width:786px) {
@@ -131,6 +138,11 @@
     .sign .sign-box {width: 95vw; }
     .sign p input:not(input[type='submit']) {padding: var(--el-normal);}
     .sign p.send-btn input {padding: var(--el-normal);}
+
+    /* Detail page style */
+    .details .detail-wrapper .container {grid-template-columns: repeat(1,1fr);}
+    .details .detail-wrapper .container > div:nth-child(3) {grid-column:unset}
+    .details .detail-wrapper .container > div:nth-child(1) {width: 80%; margin: 0 auto var(--el-medium); }
 
 }
 
