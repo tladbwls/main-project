@@ -144,6 +144,9 @@
     .details .detail-wrapper .container > div:nth-child(3) {grid-column:unset}
     .details .detail-wrapper .container > div:nth-child(1) {width: 80%; margin: 0 auto var(--el-medium); }
 
+    .details .comments-form form textarea {width: 75%;}
+    .details .comments-form form button {width: 25%;}
+
 }
 
 @media screen and (max-width:400px) {
