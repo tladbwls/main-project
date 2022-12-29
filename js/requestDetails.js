@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   const url = document.location.href;
-  console.log(url);
+  // console.log(url);
   // split 매서드 참조 : https://hianna.tistory.com/377
   const urlIndex = Number(url.split("=")[1]);
   // console.log(typeof urlIndex);

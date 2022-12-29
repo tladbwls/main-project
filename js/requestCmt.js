@@ -12,9 +12,6 @@ cmtBtn.addEventListener("click", () => {
     return;
   }
 
-  //입력창 작성 체크 끝 : 위 부분이 완료 되면 다음 코드로 진행
-  //   formData 참조 :https://ko.javascript.info/formdata
-
   const formData = new FormData(document.querySelector("form"));
   fetch(`/main_backend/model/register.php?p_idx=${urlIndex}`, {
     method: "POST",
