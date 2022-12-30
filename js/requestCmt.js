@@ -12,20 +12,22 @@ cmtBtn.addEventListener("click", () => {
     return;
   }
 
-  const formData = new FormData(document.querySelector("form"));
-  fetch(`/main_backend/model/register.php?p_idx=${urlIndex}`, {
-    method: "POST",
-    body: formData,
-  })
+  const formData = new FormData(document.querySelector(".comments-form form"));
+  fetch(
+    `/main_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=post_cmt`,
+    {
+      method: "POST",
+      body: formData,
+    }
+  )
     .then((res) => {
-      console.log(res);
-      status = res.status;
+      // console.log(res);
+      // status = res.status;
       return res.json();
     })
     .then((resData) => {
-      // console.log(resData);
       alert(resData.msg);
-      location.href = "/main_project/index.html";
+      location.reload();
     })
     .catch((err) => {
       console.log(err);

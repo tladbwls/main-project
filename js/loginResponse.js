@@ -36,7 +36,8 @@ window.addEventListener(
         const signoutBtn = this.document.querySelector(".signout a");
 
         if (signoutBtn) {
-          signoutBtn.addEventListener("click", () => {
+          signoutBtn.addEventListener("click", (e) => {
+            e.preventDefault();
             this.fetch("/main_backend/model/register.php?q=signout")
               .then((res) => res.json())
               .then((data) => {
