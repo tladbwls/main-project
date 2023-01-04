@@ -2,7 +2,7 @@ const cmtInputBox = document.querySelector("textarea");
 const cmtBtn = document.querySelector("button[type=submit]");
 const url = document.location.href;
 const urlIndex = Number(url.split("=")[1]);
-console.log(urlIndex);
+// console.log(urlIndex);
 
 // 상품평 작성
 cmtBtn.addEventListener("click", () => {
@@ -13,11 +13,13 @@ cmtBtn.addEventListener("click", () => {
     return;
   }
 
-  const formData = new FormData(document.querySelector(".comments-form form"));
+  const formData = new FormData(
+    document.querySelector(".comments-form > form")
+  );
   fetch(
-    `/main_backend/model/cmt_ctrl.php?cmt_idx=${cmtObjs[thisIdx].cmt_idx}&req_sign=patch_cmt`,
+    `/main_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=post_cmt`,
     {
-      method: "PATCH",
+      method: "POST",
       body: formData,
     }
   )
@@ -27,9 +29,9 @@ cmtBtn.addEventListener("click", () => {
       return res.json();
     })
     .then((resData) => {
-      // alert(resData.msg);
-      // location.reload();
-      console.log(resData);
+      alert(resData.msg);
+      location.reload();
+      // console.log(resData);
     })
     .catch((err) => {
       console.log(err);
@@ -46,7 +48,7 @@ const getCmtLists = async () => {
   )
     .then((res) => res.json())
     .then((lists) => {
-      console.log(lists);
+      // console.log(lists);
       if (lists.msg) {
         cmtWrapper.innerHTML = `<p class ="no-list">${lists.msg}</p>`;
         return;
@@ -102,7 +104,7 @@ getCmtLists();
 
 //수정하기 기능 함수 선언
 function updateCmt(cmtObjs) {
-  console.log(cmtObjs);
+  // console.log(cmtObjs);
   const cmtUpBtns = document.querySelectorAll("button.cmt-update"); //수정하기 버튼 그룹
   // console.log(cmtUpBtns);
   if (cmtObjs.length !== 0 && cmtUpBtns) {
@@ -158,7 +160,7 @@ function updateCmt(cmtObjs) {
         } else {
           this.textContent = "수정하기";
           changeInput.innerHTML = `
-          <p>${list.cmt_cont}</p>
+          <p>${cmtObjs[thisIdx].cmt_cont}</p>
           `;
         }
       });
