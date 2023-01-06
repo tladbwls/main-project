@@ -5,6 +5,11 @@ const getCartLists = async () => {
       console.log(cartData);
       const cartWrapper = document.querySelector(".cart-lists-wrapper");
 
+      if (cartData.length === 0) {
+        cartWrapper.innerHTML = `<p class="no-cart">카트에 상품이 없습니다.</p>`;
+        return;
+      }
+
       cartData.map((list) => {
         console.log(list);
         cartListEl = `
@@ -42,7 +47,17 @@ const getCartLists = async () => {
         btn.addEventListener("click", function () {
           console.log(this);
           const cartIdx = Number(this.getAttribute("id").split("-")[1]);
-          console.log(cartIdx);
+          fetch(
+            `/main_backend/model/cart_ctrl.php?req_cart=del_cart&cart_idx=${cartIdx}`
+          )
+            .then((res) => res.json())
+            .then((del) => {
+              // console.log(del);
+              alert(del.msg);
+              location.reload();
+            })
+            .catch((err) => console.log(err));
+          // console.log(cartIdx);
         });
       });
     })
