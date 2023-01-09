@@ -16,7 +16,7 @@ $(function () {
   const getGalleryData = (data) => {
     let items = [];
     $.each(data, function (i, item) {
-      console.log(i);
+      // console.log(i);
       //   console.log(item);
       const galleryItems = `
       <div class="grid-item">
@@ -43,10 +43,12 @@ $(function () {
   $.getJSON("/main_backend/model/get_products.php?qnt=9", getGalleryData);
 
   // Navigation Moving to Target Section
-  $(".nav-lists li").on("click", function () {
+  $(".nav-lists li").on("click", function (e) {
+    e.preventDefault(); //a에 적용된 기본 기능 제거 (클릭 이벤트)
     const targetIdx = $(this).index();
+    console.log(this);
     const pagePosition = $(".nav-target").eq(targetIdx).offset().top;
-    // console.log(pagePosition);
+    console.log($(".nav-lists li"));
     $("html, body").animate({ scrollTop: pagePosition }, 300);
   });
 }); //recommended...
