@@ -127,7 +127,7 @@
     .review-section .review-frame {width: var(--ls-full);}
 
     /* Gallery section style */
-    .gallery-section .grid-item{width: var(--ls-1-2); padding: .25rem;}
+    .grid-item{width: var(--ls-1-2); padding: .25rem;}
 
     /* insta section style */
     .insta-section .insta-wrapper {grid-template-columns: 1fr; row-gap: var(--el-medium);}

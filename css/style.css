@@ -106,11 +106,11 @@
 
 /* gallery section style */
 .gallery-section .gallery-wrapper {width: var(--ls-full); height: auto; max-height: 800px; overflow: auto;}
-.gallery-section .grid-item {width: var(--ls-1-3); padding: var(--el-small); position: relative;}
-.gallery-section .grid-item img {width: var(--ls-full); border-radius: .25rem;}
+.grid-item {width: var(--ls-1-3); padding: var(--el-small); position: relative;}
+.grid-item img {width: var(--ls-full); border-radius: .25rem;}
 
-.gallery-section .grid-item .overlay {display: block; width: 100%; height: 100%; background: rgba(255,255,255,0.5); position: absolute; left: 0; top: 0; display: flex; align-items: center; justify-content: center; opacity: 0;}
-.gallery-section .grid-item:hover .overlay {opacity: 1; transition: all .3s;}
+.grid-item .overlay {display: block; width: 100%; height: 100%; background: rgba(255,255,255,0.5); position: absolute; left: 0; top: 0; display: flex; align-items: center; justify-content: center; opacity: 0;}
+.grid-item:hover .overlay {opacity: 1; transition: all .3s;}
 
 
 ::-webkit-scrollbar {
