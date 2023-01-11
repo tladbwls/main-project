@@ -1,10 +1,11 @@
 $(function () {
   //Masonry Efeect
-  //   $(".grid").masonry({
-  //     // options
-  //     itemSelector: ".grid-item",
-  //     // columnWidth: 200,
-  //   });
+  $(".grid").masonry({
+    //     // options
+    itemSelector: ".grid-item",
+    //     // columnWidth: 200,
+    columnWidth: ".grid-sizer",
+  });
 
   const gridBox = $(".grid");
   //   console.log(gridBox);
@@ -44,14 +45,9 @@ $(function () {
       items.push($(galleryItems).get(0));
     });
     $(".grid").append(items);
-    // $(".grid").imagesLoaded(function () {
-    //   // images have loaded
-    //   $(".grid").masonry({
-    //     // options
-    //     itemSelector: ".grid-item",
-    //     // columnWidth: 200,
-    //   });
-    // });
+    $(".grid").imagesLoaded(function () {
+      $(".grid").masonry("appended", items);
+    });
     addCount += slicedData.length;
     console.log(addCount);
     if (addCount === allData.length) {
