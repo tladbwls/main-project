@@ -11,7 +11,7 @@
 /* Product panel style */
 .admin-wrapper .admin-panels {width: 100%; height: auto; margin-top: var(--el-medium);}
 .admin-wrapper .panel {width: 100%; height: auto; border: 1px solid var(--color-gray-d); padding: .5rem; display: flex; column-gap: .25rem; flex-direction: column;}
-.admin-wrapper .panel:nth-child(1){display: none;}
+.admin-wrapper .panel:nth-child(2){display: none;}
 
 /* Product Input Panel Style */
 .admin-wrapper .panel > .product-panel-wrapper {width: 100%; height: auto; display: flex; column-gap: .25rem;}
@@ -49,4 +49,4 @@
 .admin-wrapper .user-lists li span.lvl{width:20%;}
 .admin-wrapper .user-lists li span.updt{width:10%;}
 .admin-wrapper .user-lists li span.del{width:10%;}
-.admin-wrapper .user-lists li.column-name{width:100%; height:auto; background:var(--color-black); color:#fff;}
+.admin-wrapper .user-lists li.column-name{width:100%; height:auto; background:var(--color-black); color:#fff; display: flex;}
