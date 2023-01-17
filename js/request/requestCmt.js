@@ -175,9 +175,45 @@ function updateCmt(cmtObjs) {
           changeInput.innerHTML = `
           <form onsubmit = "return false;" class ="update-form update-form-${thisIdx}">
             <input type = "text" name = "update_cont" value = "${cmtObjs[thisIdx].cmt_cont}">
+            <div class =  "rating">
+              <div class =  "stars">
+              <input type="radio" name="cmt_star" id="up-star-1" value="5" class = "val-5">
+              <label for="up-star-1">
+                <i class="ri-star-line"></i>
+                <i class="ri-star-fill"></i>
+              </label>
+              <input type="radio" name="cmt_star" id="up-star-2" value="4" class = "val-4">
+              <label for="up-star-2">
+                <i class="ri-star-line"></i>
+                <i class="ri-star-fill"></i>
+              </label>
+              <input type="radio" name="cmt_star" id="up-star-3" value="3" class = "val-3">
+              <label for="up-star-3">
+                <i class="ri-star-line"></i>
+                <i class="ri-star-fill"></i>
+              </label>
+              <input type="radio" name="cmt_star" id="up-star-4" value="2" class = "val-2">
+              <label for="up-star-4">
+                <i class="ri-star-line"></i>
+                <i class="ri-star-fill"></i>
+              </label>
+              <input type="radio" name="cmt_star" id="up-star-5" value="1" class = "val-1">
+              <label for="up-star-5">
+                <i class="ri-star-line"></i>
+                <i class="ri-star-fill"></i>
+              </label>
+              </div>
+            </div>
             <button type = "submit">수정입력</button>
           </form>
           `;
+
+          //기존 입력된 별점 가져오기
+          const upRadioNum = document.querySelector(
+            `.update-form-${thisIdx} input[type="radio"].val-${cmtObjs[thisIdx].rating}`
+          );
+          // console.log(upRadioNum);
+          upRadioNum.checked = true;
 
           const udSubmitBtn = document.querySelector(
             `.update-form-${thisIdx} button`
