@@ -88,7 +88,7 @@ footer .footer-upper {display: flex; justify-content: space-between; align-items
 footer .footer-logo {width: 100px;}
 footer .footer-logo img {width: var(--ls-full);}
 footer .footer-info {display: flex;}
-footer .footer-info > ul {display: flex;}
+footer .footer-info > ul {display: flex; align-items: center;}
 footer .footer-info .footer-nav a {font-size: var(--fs-small-text); padding: var(--el-medium);}
 footer .footer-sns li {padding: 0 0 0 1rem;}
 footer .footer-sns li a {width: 20px; display: flex ; align-items: center;}

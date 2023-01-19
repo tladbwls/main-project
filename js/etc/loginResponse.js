@@ -1,8 +1,6 @@
-window.addEventListener(
-  "load",
-  function () {
+window.addEventListener("load", function () {
+  async function checkSign() {
     const userIcon = this.document.querySelectorAll(".user");
-    // console.log(userIcon); 2개 배열 요소
     const adminIcon = this.document.querySelectorAll(".admin");
     const cart = this.document.querySelector(".cart");
 
@@ -27,9 +25,6 @@ window.addEventListener(
             <i class="ri-user-3-fill"></i>
           </a>`;
           }); //사용자 정보 없는 아이콘
-          //     userIcon.innerHTML = ` <a href="/main_project/pages/sign-in.html">
-          //   <i class="ri-user-3-fill"></i>
-          // </a>`;
 
           cart.innerHTML = cartItemEl; //카트 숫자 아이콘
         } else {
@@ -38,9 +33,8 @@ window.addEventListener(
               item.style.display = "flex";
             });
             userIcon.forEach((item) => {
-              item.innerHTML = `<button class = "signout">${data.userid} | <a href = "#">Logout</button>`;
+              item.innerHTML = `<button class = "signout"><span>${data.userid}</span>&nbsp | <a href = "#">Logout</button>`;
             });
-            // userIcon.innerHTML = `<button class = "signout">${data.userid} | <a href = "#">Logout</button>`;
 
             cart.innerHTML = cartItemEl;
           } else {
@@ -48,29 +42,30 @@ window.addEventListener(
               item.style.display = "none";
             });
             userIcon.forEach((item) => {
-              item.innerHTML = `<button class = "signout">${data.userid} | <a href = "#">Logout</button>`;
+              item.innerHTML = `<button class = "signout"><span>${data.userid}</span>&nbsp | <a href = "#">Logout</button>`;
             });
-            // userIcon.innerHTML = `<button class = "signout">${data.userid} | <a href = "#">Logout</button>`;
 
             cart.innerHTML = cartItemEl;
           }
         }
 
-        const signoutBtn = this.document.querySelector(".signout a");
+        const signoutBtn = this.document.querySelectorAll(".signout a");
 
         if (signoutBtn) {
-          signoutBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            this.fetch("/main_backend/model/register.php?q=signout")
-              .then((res) => res.json())
-              .then((data) => {
-                console.log(data);
-                this.alert("로그아웃 되었습니다.!!");
-                this.location.reload();
-              })
-              .catch((err) => {
-                console.log(err);
-              });
+          signoutBtn.forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              this.fetch("/main_backend/model/register.php?q=signout")
+                .then((res) => res.json())
+                .then((data) => {
+                  console.log(data);
+                  this.alert("로그아웃 되었습니다!!");
+                  this.location.reload();
+                })
+                .catch((err) => {
+                  console.log(err);
+                });
+            });
           });
         }
       })
@@ -79,13 +74,7 @@ window.addEventListener(
       });
   }
 
-  //   const signoutBtn = document.querySelector("#so");
-
-  //   signoutBtn.addEventListener("click", () => {
-  //     this.fetch("/main_backend/model/register.php?q=signout")
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         console.log(data);
-  //       });
-  //   });
-);
+  this.setTimeout(function () {
+    checkSign();
+  }, 300);
+});
