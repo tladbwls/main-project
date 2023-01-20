@@ -1,6 +1,5 @@
 window.addEventListener("load", function () {
   const url = document.location.href;
-  // console.log(url);
   // split 매서드 참조 : https://hianna.tistory.com/377
   const urlIndex = Number(url.split("=")[1]);
   // console.log(typeof urlIndex);
@@ -10,7 +9,6 @@ window.addEventListener("load", function () {
   //3. 장바구니 데이터 세션 요청 함수
   const requestCart = () => {
     const adtc = document.querySelector(".add-to-cart"); // 장바구니 버튼
-    // console.log(adtc);
     const formData = new FormData(document.querySelector(".cart-form")); //장바구니 전달 데이터
 
     adtc.addEventListener("click", async () => {
@@ -22,7 +20,6 @@ window.addEventListener("load", function () {
         .then((cart) => {
           this.alert(cart.msg);
           this.location.reload();
-          // console.log(cart);
         })
         .catch((err) => console.log(err));
     });
@@ -32,7 +29,6 @@ window.addEventListener("load", function () {
     await fetch(`/main_backend/model/get_details.php?idx=${urlIndex}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         let imageEl;
         let textEl;
         imageEl = `
@@ -104,9 +100,6 @@ window.addEventListener("load", function () {
         let count = Number(countEl.textContent); //카운팅 숫자
         let sumPrice = Number(sumEl.textContent.replace(",", "")); //합산 가격
 
-        // console.log(count);
-        // console.log(sumPrice);
-
         countBtn.forEach((btn) => {
           btn.addEventListener("click", function () {
             if (this.classList.contains("up")) {
@@ -120,15 +113,10 @@ window.addEventListener("load", function () {
               //   count--;
               // }
             }
-            // console.log(count);
             countEl.textContent = cartCountEl.value = count;
-            // cartCountEl.value = count;
             sumEl.textContent = cartSumEl.value = (count * sumPrice)
               .toString()
               .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            // cartSumEl.value = (count * sumPrice)
-            //   .toString()
-            //   .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
           });
         });
         requestCart(); //3.

@@ -9,8 +9,6 @@ window.addEventListener("load", function () {
         return res.json();
       })
       .then((data) => {
-        console.log(data.userid, data.user_idx, data.cart_count, data.user_lvl);
-
         const cartItemEl = `
          <a href="/main_project/pages/cart.html"><i class="ri-shopping-cart-line"></i><em>(${data.cart_count})</em></a>  
         `;

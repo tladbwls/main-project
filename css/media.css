@@ -123,10 +123,6 @@
     /* slider section style */
     .slider-section .swiper-slide > div.slider-image {width: 90%;}
 
-    /* Product section style */
-    /* .product-frame {width: var(--ls-full);}
-    .product-frame img {width: 60%; margin: auto;} */
-
     /* review section */
     .review-section .review-frame {width: var(--ls-full);}
 

@@ -1,5 +1,4 @@
-window.addEventListener("load", function () {
-  /*************Header change Effect*********/
+$(document).ajaxComplete(function () {
   const header = document.querySelector("#header");
   const stickyHeader = () => {
     const scry = window.scrollY;

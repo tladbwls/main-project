@@ -2,16 +2,12 @@
 $(function () {
   $(".upload-hidden").on("change", function () {
     //on은 자바스크립트의 addEventListner 역할을 한다.
-    // console.log("changed");
     let fileneme;
     if (window.FileReader) {
       //파일 리더 작동 확인
-      // console.log($(this));
       fileneme = $(this)[0].files[0].name;
       console.log(fileneme);
     }
-
-    // console.log($(this));
     $(this).siblings().val(fileneme);
   });
   $("#main-image").on("change", imgFileSelect);

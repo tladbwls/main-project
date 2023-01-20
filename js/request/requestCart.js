@@ -2,7 +2,6 @@ const getCartLists = async () => {
   await fetch("/main_backend/model/cart_ctrl.php?req_cart=get_cart")
     .then((res) => res.json())
     .then((cartData) => {
-      console.log(cartData);
       const cartWrapper = document.querySelector(".cart-lists-wrapper");
 
       if (cartData.length === 0) {
@@ -11,7 +10,6 @@ const getCartLists = async () => {
       }
 
       cartData.map((list) => {
-        console.log(list);
         cartListEl = `
             <div class="cart-list">
               <div class="cart-frame">
@@ -45,19 +43,16 @@ const getCartLists = async () => {
       const rmvCartBtn = document.querySelectorAll(".remove-cart");
       rmvCartBtn.forEach((btn) => {
         btn.addEventListener("click", function () {
-          console.log(this);
           const cartIdx = Number(this.getAttribute("id").split("-")[1]);
           fetch(
             `/main_backend/model/cart_ctrl.php?req_cart=del_cart&cart_idx=${cartIdx}`
           )
             .then((res) => res.json())
             .then((del) => {
-              // console.log(del);
               alert(del.msg);
               location.reload();
             })
             .catch((err) => console.log(err));
-          // console.log(cartIdx);
         });
       });
     })

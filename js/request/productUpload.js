@@ -22,18 +22,3 @@ submitBtn.addEventListener("click", () => {
       console.log(err);
     });
 });
-
-// //get comments
-
-// const getCmtLists = async () => {
-//   await fetch(
-//     `/main_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=get_cmt`
-//   )
-//     .then((res) => res.json())
-//     .then((lists) => {
-//       console.log(lists);
-//     })
-//     .catch((err) => console.log(err));
-// };
-
-// getCmtLists();
