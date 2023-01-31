@@ -92,7 +92,7 @@
  .product-text p {padding: var(--el-normal); font-size: var(--fs-small-text);}
 
 /* Review Style */
-.review-section{background: url(/main_project/images/review-background.jpeg) no-repeat center center; background-size: cover;}
+.review-section{background: url(/soaply/images/review-background.jpeg) no-repeat center center; background-size: cover;}
 .review-section .reviews {display: flex; flex-wrap: wrap;}
 .review-section .review-frame {width: var(--ls-1-3); padding: var(--el-medium); } 
 .review-section .review-writer {display: flex; flex-direction: column; align-items: center; row-gap: var(--el-small);}
@@ -113,13 +113,6 @@
 .grid-item .overlay {display: block; width: 100%; height: 100%; background: rgba(255,255,255,0.5); position: absolute; left: 0; top: 0; display: flex; align-items: center; justify-content: center; opacity: 0;}
 .grid-item:hover .overlay {opacity: 1; transition: all .3s;}
 
-
-::-webkit-scrollbar {
-  width: 3px;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(#fff, #000);
-}
 
 .insta-section .insta-wrapper {display: grid; grid-template-columns: 1fr 1fr 1fr;}
 .insta-section .insta-image {display: flex; flex-wrap: wrap; justify-content: space-between; column-gap: .25rem;} 

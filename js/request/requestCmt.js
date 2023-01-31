@@ -34,7 +34,7 @@ cmtBtn.addEventListener("click", () => {
     document.querySelector(".comments-form > form")
   );
   fetch(
-    `/main_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=post_cmt`,
+    `/soaply_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=post_cmt`,
     {
       method: "POST",
       body: formData,
@@ -58,23 +58,25 @@ const listCount = document.querySelector(".comments-info strong");
 
 const getCmtLists = async () => {
   await fetch(
-    `/main_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=get_cmt`
+    `/soaply_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=get_cmt`
   )
     .then((res) => res.json())
     .then((lists) => {
+      const starVal = document.querySelector(".star-avg-val");
+      const riFill = document.querySelector(".ri-fill");
       if (lists.msg) {
         cmtWrapper.innerHTML = `<p class ="no-list">${lists.msg}</p>`;
+        starVal.textContent = parseFloat(0).toFixed(2);
+        riFill.style.width = 0;
         return;
       }
       listCount.textContent = lists.length; //입력된 평가글 갯수 표시
 
       const avg = Number(lists[0].avg); //평균값 숫자로 변환
       const floatAvg = parseFloat(avg).toFixed(2); //parseFloat:실수 표시, toFixed(n) : 소수점 n번째 자리까지 표사 => 반올림, 반내림 가능
-      const starVal = document.querySelector(".star-avg-val");
-      const riFill = document.querySelector(".ri-fill");
 
       starVal.textContent = floatAvg; // 평균값 표시
-      riFill.style.width = (floatAvg / 5) * 100 + "%";
+      riFill.style.width = (floatAvg / 5) * 100 - 8 + "%";
       let listsElmt;
       lists.map((list, idx) => {
         if (list.user_id === "guest") {
@@ -118,7 +120,6 @@ const getCmtLists = async () => {
         }
         cmtWrapper.innerHTML += listsElmt;
       });
-
       updateCmt(lists); //수정하기 기능 분리 호출
       getRating(lists); //별점 출력 함수 선언
     })
@@ -222,7 +223,7 @@ function updateCmt(cmtObjs) {
                 document.querySelector(`.update-form-${thisIdx}`)
               );
               fetch(
-                `/main_backend/model/cmt_ctrl.php?cmt_idx=${cmtObjs[thisIdx].cmt_idx}&req_sign=patch_cmt`,
+                `/soaply_backend/model/cmt_ctrl.php?cmt_idx=${cmtObjs[thisIdx].cmt_idx}&req_sign=patch_cmt`,
                 {
                   method: "PATCH",
                   body: formData,
